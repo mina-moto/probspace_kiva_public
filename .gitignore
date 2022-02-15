@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Project
+/mlruns/
+/input/*
+/preprocess/*
+/output/*
+!.gitkeep
