@@ -1,0 +1,3 @@
+description:
+  - deberta_meanpooling_l1_target_log_20220212の追加
+output_dir: "output/preprocess/table/make_feature012/"

@@ -1,0 +1,81 @@
+# deberta_meanpooling_l1_target_log_20220212の追加
+feature_dir_path: "output/preprocess/table/make_feature012/"
+sentence_feature_dir_path: "output/preprocess/table/sentence_feature/"
+is_sentence_feature: True
+tfidf_svd_vec_dir_path: "output/preprocess/table/tfidf_svd/"
+is_tfidf_svd_vec: True
+output_dir_path: "output/preprocess/table/make_table_dataset/009/"
+stacking_prediction_list: [
+  # robertaの予測
+  {
+    "train_path": "output/roberta_features/deberta_clspooling_huber_20220210/oof_225.065694_deberta-base_cv5_2022-02-10-05-08.csv",
+    "test_path": "output/roberta_features/deberta_clspooling_huber_20220210/not_postprocess_subm_225.065694_deberta-base_cv5_2022-02-10-05-08.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "deberta_clspooling_huber_20220210"
+  },
+  {
+    "train_path": "output/roberta_features/roberta_cls_pooling_huber_20220210/oof_220.293049_roberta-base_cv5_2022-02-10-08-52.csv",
+    "test_path": "output/roberta_features/roberta_cls_pooling_huber_20220210/not_postprocess_subm_220.293049_roberta-base_cv5_2022-02-10-08-52.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "roberta_cls_pooling_huber_20220210"
+  },
+  {
+    "train_path": "output/roberta_features/roberta_clspooling_mse_20220209/oof_244.930912_roberta-base_cv5_2022-02-09-13-33.csv",
+    "test_path": "output/roberta_features/roberta_clspooling_mse_20220209/not_postprocess_subm_244.930912_roberta-base_cv5_2022-02-09-13-33.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "roberta_clspooling_mse_20220209"
+  },
+  {
+    "train_path": "output/roberta_features/roberta_meanpooling_huber_20220209/oof_220.051351_roberta-base_cv5_2022-02-09-10-40.csv",
+    "test_path": "output/roberta_features/roberta_meanpooling_huber_20220209/not_postprocess_subm_220.051351_roberta-base_cv5_2022-02-09-10-40.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "roberta_meanpooling_huber_20220209"
+  },
+  {
+    "train_path": "output/roberta_features/deberta_meanpooling_huber_20220211/oof_224.520710_deberta-base_cv5_2022-02-11-00-16.csv",
+    "test_path": "output/roberta_features/deberta_meanpooling_huber_20220211/not_postprocess_subm_224.520710_deberta-base_cv5_2022-02-11-00-16.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "deberta_meanpooling_huber_20220211"
+  },
+  {
+    "train_path": "output/roberta_features/roberta_clspooling_l1_target_log_20220211/oof_219.947336_roberta-base_cv5_2022-02-11-11-06.csv",
+    "test_path": "output/roberta_features/roberta_clspooling_l1_target_log_20220211/not_postprocess_subm_219.947336_roberta-base_cv5_2022-02-11-11-06.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "roberta_clspooling_l1_target_log_20220211"
+  },
+  {
+    "train_path": "output/roberta_features/roberta_clspooling_mse_target_log_20220211/oof_229.724196_roberta-base_cv5_2022-02-11-13-24.csv",
+    "test_path": "output/roberta_features/roberta_clspooling_mse_target_log_20220211/not_postprocess_subm_229.724196_roberta-base_cv5_2022-02-11-13-24.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "roberta_clspooling_mse_target_log_20220211"
+  },
+  {
+    "train_path": "output/roberta_features/deberta_meanpooling_l1_target_log_20220212/oof_221.739404_deberta-base_cv5_2022-02-11-23-19.csv",
+    "test_path": "output/roberta_features/deberta_meanpooling_l1_target_log_20220212/not_postprocess_subm_221.739404_deberta-base_cv5_2022-02-11-23-19.csv",
+    "train_pred_name": "pred",
+    "test_pred_name": "LOAN_AMOUNT",
+    "new_pred_name": "deberta_meanpooling_l1_target_log_20220212"
+  },
+  # image predict
+  {
+    "train_path": "output/image_predict/evaluator005/valid_prediction.csv",
+    "test_path": "output/image_predict/evaluator005/test_prediction.csv",
+    "train_pred_name": "PREDICTION_FROM_IMAGE",
+    "test_pred_name": "PREDICTION_FROM_IMAGE",
+    "new_pred_name": "image_pred"
+  },
+  {
+    "train_path": "output/image_predict/evaluator006/valid_prediction.csv",
+    "test_path": "output/image_predict/evaluator006/test_prediction.csv",
+    "train_pred_name": "PREDICTION_FROM_IMAGE",
+    "test_pred_name": "PREDICTION_FROM_IMAGE",
+    "new_pred_name": "image_pred_target_log"
+  },
+]
