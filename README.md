@@ -1,4 +1,6 @@
-# probspace_kiva_public
+# ProbSpace クラファンコンペ 1st place solution
+[probSpace_kiva]: https://comp.probspace.com/competitions/kiva2021s
+「[ProbSpace Kiva／クラウドファンディングの資金調達額予測](probSpace_kiva)」の 1st place solutionです。
 
 ## 画像による予測
 
