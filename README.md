@@ -19,16 +19,16 @@
   - BERTのカスタムヘッダーの変更
 
 各モデルのnotebookまでのパス、ロスの種類などは下記テーブルを参照
-| パス                                                               | ロス           | 備考                                                          |
-| ------------------------------------------------------------------ | -------------- | ------------------------------------------------------------- |
-| output/roberta_features/roberta_meanpooling_huber_20220209         | Huber          |                                                               |
-| output/roberta_features/roberta_cls_pooling_huber_20220210         | Huber          |                                                               |
-| output/roberta_features/roberta_clspooling_mse_20220209            | MSE            |                                                               |
-| output/roberta_features/deberta_clspooling_huber_20220210          | Huber          |                                                               |
-| output/roberta_features/deberta_meanpooling_huber_20220211         | Huber          | mean poolingを想定したが、誤ってcls poolingで学習推論してた。 |
-| output/roberta_features/roberta_clspooling_l1_target_log_20220211  | L1 target log  |                                                               |
-| output/roberta_features/roberta_clspooling_mse_target_log_20220211 | MSE target log |                                                               |
-| output/roberta_features/deberta_meanpooling_l1_target_log_20220212 | L1 target log  | mean poolingを想定したが、誤ってcls poolingで学習推論してた。 |
+| パス                                                               | ロス           | 備考                                                            |
+| ------------------------------------------------------------------ | -------------- | --------------------------------------------------------------- |
+| output/roberta_features/roberta_meanpooling_huber_20220209         | Huber          |                                                                 |
+| output/roberta_features/roberta_cls_pooling_huber_20220210         | Huber          |                                                                 |
+| output/roberta_features/roberta_clspooling_mse_20220209            | MSE            |                                                                 |
+| output/roberta_features/deberta_clspooling_huber_20220210          | Huber          |                                                                 |
+| output/roberta_features/deberta_meanpooling_huber_20220211         | Huber          | mean poolingを想定したが、誤ってcls poolingで学習推論している。 |
+| output/roberta_features/roberta_clspooling_l1_target_log_20220211  | L1 target log  |                                                                 |
+| output/roberta_features/roberta_clspooling_mse_target_log_20220211 | MSE target log |                                                                 |
+| output/roberta_features/deberta_meanpooling_l1_target_log_20220212 | L1 target log  | mean poolingを想定したが、誤ってcls poolingで学習推論している。 |
 
 
 順にnotebookを実行する。
