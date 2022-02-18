@@ -74,3 +74,9 @@ python src/table/make_table_dataset.py -c config/table/make_table_dataset/009.ym
 cd src/
 python seed_change_exec_lgbm_train.py -c ../config/table/seed_change_exec_lgbm_train/011.yml
 ```
+
+## アンサンブル
+- Lightgbm、CatBoostの予測結果をアンサンブルする。
+- 予測値は25-10000で離散化する。
+- `output/ensemble/{now datetime}/`に予測結果を出力する。
+- アンサンブルするモデルはスクリプト内のconfigで指定しているが、Lightgbm及びCatboostの予測結果ファイル名には実行時刻が含まれるため、再現のためには変更する必要がある。
