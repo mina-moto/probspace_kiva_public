@@ -1,0 +1,7 @@
+train_path: "input/train.csv"
+test_path: "input/test.csv"
+train_images_dir_path: "input/train_images/"
+test_images_dir_path: "input/test_images/"
+train_output_path: "output/image_predict/dataset001/train.csv"
+test_output_path: "output/image_predict/dataset001/test.csv"
+is_log: False

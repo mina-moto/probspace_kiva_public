@@ -1,0 +1,47 @@
+experiment_setting:
+  experiment_name: "image_predict_trainer"
+  description: "swin、転移学習、epoch、学習率調整"
+
+train_path: "output/image_predict/dataset001/train.csv"
+model_dir_save_path: "output/image_predict/trainer005/model/"
+validation_dataset_save_dir: "output/image_predict/trainer005/validation_dataset/"
+validation_num: 4
+seed: 0
+model_class_name: "SwinTTransferModel"
+
+pl_trainer_params:
+  accelerator: "auto"
+  accumulate_grad_batches: 1
+  progress_bar_refresh_rate: 1
+  fast_dev_run: false
+  num_sanity_val_steps: 0
+  gpus: 1
+  max_epochs: 100
+  #  max_epochs: 2
+
+early_stopping_params:
+  patience: 10
+train_loader_params:
+  shuffle: True
+  pin_memory: True
+  drop_last: True
+  batch_size: 32
+  num_workers: 2
+#  batch_size: 1
+#  num_workers: 0
+
+val_loader_params:
+  shuffle: False
+  pin_memory: False
+  drop_last: False
+  batch_size: 32
+  num_workers: 2
+#  batch_size: 1
+#  num_workers: 0
+
+model_params:
+  optimizer_params:
+    lr: 1.0e-3
+  scheduler_params:
+    T_0: 5
+    eta_min: 1.0e-4
