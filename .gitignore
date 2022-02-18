@@ -131,6 +131,4 @@ dmypy.json
 # Project
 /mlruns/
 /input/*
-/preprocess/*
-/output/*
 !.gitkeep
