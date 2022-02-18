@@ -1,5 +1,7 @@
 # ProbSpace クラファンコンペ 1st place solution
+
 [probSpace_kiva]: https://comp.probspace.com/competitions/kiva2021s
+
 「[ProbSpace Kiva／クラウドファンディングの資金調達額予測](probSpace_kiva)」の 1st place solutionです。
 
 ## 画像による予測
@@ -16,11 +18,13 @@ python src/image_predict/make_dataset.py -c config/image_predict/make_dataset/ma
 ```
 
 学習
+
 ```
 python src/image_predict/trainer.py -c config/image_predict/trainer/trainer005.yaml
 ```
 
 評価・推論
+
 ```
 python src/image_predict/evaluator.py -c config/image_predict/evaluator/evaluator005.yaml
 ```
@@ -40,43 +44,57 @@ python src/image_predict/trainer.py -c config/image_predict/trainer/trainer006.y
 ```
 
 評価・推論
+
 ```
 python src/image_predict/evaluator.py -c config/image_predict/evaluator/evaluator006.yaml
 ```
 
 ## テーブルデータの特徴量生成
+
 - TAGSやカテゴリの統計量などのテーブルデータの特徴量の作成。
 - 実行する前提として、プロジェクト直下の`.env`の`PROJECT_ROOT`にプロジェクト直下のフォルダを指定している。
 
 TAGS、LOAN_USEに対してtf-idf、SVD
+
 ```
 python src/table/nlp_vectorizer.py
 ```
 
 DESCRIPTION_TRANSLATED、DESCRIPTION、LOAN_USEのカラムに基づく特徴量の生成
+
 ```
 python src/table/sentence_feature.py
 ```
 
 前処理などを含む上記以外の特徴量の作成
+
 ```
 python src/table/make_features.py -c config/table/make_features/make_features012.yml 
 ```
 
 画像・BERTの予測や上記結果の結合を行い、テーブルデータの特徴量の作成
+
 ```
 python src/table/make_table_dataset.py -c config/table/make_table_dataset/009.yml
 ```
 
 ## Lightgbmによる予測
+
 最終のアンサンブルに用いたモデルの学習、推論を行う。
+
 ```
 cd src/
 python seed_change_exec_lgbm_train.py -c ../config/table/seed_change_exec_lgbm_train/011.yml
 ```
 
 ## アンサンブル
+
 - Lightgbm、CatBoostの予測結果をアンサンブルする。
 - 予測値は25-10000で離散化する。
 - `output/ensemble/{now datetime}/`に予測結果を出力する。
+- 実行する前提として、プロジェクト直下の`.env`の`PROJECT_ROOT`にプロジェクト直下のフォルダを指定している。
 - アンサンブルするモデルはスクリプト内のconfigで指定しているが、Lightgbm及びCatboostの予測結果ファイル名には実行時刻が含まれるため、再現のためには変更する必要がある。
+
+```
+python src/ensemble.py
+```
