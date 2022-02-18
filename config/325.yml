@@ -1,0 +1,52 @@
+description:
+  - データを009に変更
+  - param変更
+  - seed 3047
+
+data:
+  train: ../output/preprocess/table/make_table_dataset/009/train.csv
+  test: ../output/preprocess/table/make_table_dataset/009/test.csv
+  tfidf: ../output/preprocess/preprocess_v1/tfidf_en_text.joblib
+
+train_setting:
+  fold_num: 10
+  key: is_loan_amount_outlier
+
+save_path:
+  ../output/table/catboost/325
+
+cat_params:
+  loss_function: MAE
+  use_best_model: True
+  early_stopping_rounds: 200
+  random_seed: 3047
+  learning_rate: 0.01
+  depth: 8
+  l2_leaf_reg: 5
+
+remove_features:
+  - LOAN_ID
+  - DESCRIPTION
+  - DESCRIPTION_TRANSLATED
+  - LOAN_AMOUNT
+  - IMAGE_ID
+  - LOAN_USE
+  - COUNTRY_NAME
+  - CURRENCY_POLICY
+  - CURRENCY_EXCHANGE_COVERAGE_RATE
+  - TAGS
+  - clean_DESCRIPTION_TRANSLATED
+  - clean_DESCRIPTION_TRANSLATED_tfidf
+  - DISTRIBUTION_MODEL
+  - roberta_pred_loan_use
+
+label_enc_features:
+  - ORIGINAL_LANGUAGE
+  - REPAYMENT_INTERVAL
+  - SECTOR_NAME
+  - country_code_sector_name
+  - LOAN_USE_first_word
+  - ACTIVITY_NAME
+  - COUNTRY_CODE
+  - CURRENCY
+  - TOWN_NAME
