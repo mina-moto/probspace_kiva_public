@@ -43,12 +43,12 @@ config = {
     # train_pred_name、test_pred_nameに予測値が格納されているカラムを指定。
     "prediction_dict": {
         # lgb fold 10、特徴量009
-        "lgb_011_seed_777": {
-            "train_path": "output/table/seed_change_exec_lgbm_train/011/seed_777/oof_192.832124_lgb_gbdt_cv10_2022-02-13-15-28.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/seed_change_exec_lgbm_train/011/seed_777/subm_192.832124_lgb_gbdt_cv10_2022-02-13-15-28.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
+        # "lgb_011_seed_777": {
+        #     "train_path": "output/table/seed_change_exec_lgbm_train/011/seed_777/oof_192.832124_lgb_gbdt_cv10_2022-02-13-15-28.csv",
+        #     "train_pred_name": "oof_pred",
+        #     "test_path": "output/table/seed_change_exec_lgbm_train/011/seed_777/subm_192.832124_lgb_gbdt_cv10_2022-02-13-15-28.csv",
+        #     "test_pred_name": "LOAN_AMOUNT",
+        # },
         "lgb_011_seed_3407": {
             "train_path": "output/table/seed_change_exec_lgbm_train/011/seed_3407/oof_192.628555_lgb_gbdt_cv10_2022-02-13-14-33.csv",
             "train_pred_name": "oof_pred",
@@ -62,37 +62,7 @@ config = {
             "test_path": "output/table/catboost/110/not_postprocess_subm_191.585607_catboost_cv10_2022-02-13-09-15.csv",
             "test_pred_name": "LOAN_AMOUNT",
         },
-        "cat_111": {
-            "train_path": "output/table/catboost/111/oof_191.805896_catboost_cv10_2022-02-13-05-40.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/catboost/111/not_postprocess_subm_191.805896_catboost_cv10_2022-02-13-05-40.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
-        "cat_112": {
-            "train_path": "output/table/catboost/112/oof_191.656834_catboost_cv10_2022-02-13-08-53.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/catboost/112/not_postprocess_subm_191.656834_catboost_cv10_2022-02-13-08-53.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
-        "cat_113": {
-            "train_path": "output/table/catboost/113/oof_191.688091_catboost_cv10_2022-02-13-08-45.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/catboost/113/not_postprocess_subm_191.688091_catboost_cv10_2022-02-13-08-45.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
-        "cat_114": {
-            "train_path": "output/table/catboost/114/oof_191.538985_catboost_cv10_2022-02-13-08-56.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/catboost/114/not_postprocess_subm_191.538985_catboost_cv10_2022-02-13-08-56.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
         # catパラメータ変更、特徴量009
-        "cat_324": {
-            "train_path": "output/table/catboost/324/oof_190.441845_catboost_cv10_2022-02-13-17-57.csv",
-            "train_pred_name": "oof_pred",
-            "test_path": "output/table/catboost/324/not_postprocess_subm_190.441845_catboost_cv10_2022-02-13-17-57.csv",
-            "test_pred_name": "LOAN_AMOUNT",
-        },
         "cat_325": {
             "train_path": "output/table/catboost/325/oof_190.238310_catboost_cv10_2022-02-13-17-59.csv",
             "train_pred_name": "oof_pred",
