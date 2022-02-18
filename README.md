@@ -3,6 +3,7 @@
 「[ProbSpace Kiva／クラウドファンディングの資金調達額予測](probSpace_kiva)」の 1st place solutionです。
 
 ## 画像による予測
+
 - 画像データから学習済みモデルの転移学習によるLOAN_AMOUNTの予測を行う。
 - それぞれの予測値をテーブルデータの入力とする。
 - LOAN_AMOUNTをlog変換して学習した場合と、変換していない場合の2種類のモデルを用いた。
@@ -66,3 +67,4 @@ python src/table/make_features.py -c config/table/make_features/make_features012
 ```
 python src/table/make_table_dataset.py -c config/table/make_table_dataset/009.yml
 ```
+===

@@ -1,0 +1,15 @@
+experiment_setting:
+  experiment_name: "image_predict_evaluator"
+  description: "swin、転移学習、target log、epoch、学習率調整の評価"
+
+output_transform:
+#  is_exp: False
+  is_exp: True
+
+validation_dataset_dir_path: "output/image_predict/trainer006/validation_dataset/"
+test_path: "output/image_predict/dataset002/test.csv"
+
+model_dir_path: "output/image_predict/trainer006/model/"
+model_class_name: "SwinTTransferModel"
+valid_prediction_save_path: "output/image_predict/evaluator006/valid_prediction.csv"
+test_prediction_save_path: "output/image_predict/evaluator006/test_prediction.csv"
