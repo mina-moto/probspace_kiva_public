@@ -67,4 +67,10 @@ python src/table/make_features.py -c config/table/make_features/make_features012
 ```
 python src/table/make_table_dataset.py -c config/table/make_table_dataset/009.yml
 ```
-===
+
+## Lightgbmによる予測
+最終のアンサンブルに用いたモデルの学習、推論を行う。
+```
+cd src/
+python seed_change_exec_lgbm_train.py -c ../config/table/seed_change_exec_lgbm_train/011.yml
+```
