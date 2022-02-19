@@ -145,3 +145,9 @@ python exec_cb_pred.py -c ../config/325.yml
 ```
 python src/ensemble.py
 ```
+
+## 参考にしたコード
+一部のコードは下記を参考に作成しました。
+- https://signate.jp/competitions/281/discussions/bert-5-folds-baseline-model-1
+- https://github.com/senkin13/kaggle/tree/master/probspace_youtube
+- https://github.com/MitsuruFujiwara/SantanderValuePredictionChallenge
