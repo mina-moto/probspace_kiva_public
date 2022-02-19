@@ -4,6 +4,13 @@
 
 「[ProbSpace Kiva／クラウドファンディングの資金調達額予測](probSpace_kiva)」の 1st place solutionです。
 
+## 概要
+
+- BERTによりDESCRIPTION_TRANSLATEDとSECTOR_NAME、COUNTRY_CODEを用いて予測する。
+- SwinTransformerの転移学習による画像を用いて予測する。
+- 上記結果をStackingしたテーブル特徴量を作成して、Lightgbm、CatBoostにより予測する。
+- Lightgbm、CatBoostの予測結果を複数用意してアンサンブルする。
+
 ## 再現のための準備
 - probspaceで提供されているデータを`input/`へ配置する。
 - プロジェクトディレクトリ直下`.env`の`PROJECT_ROOT`で、このリポジトリまでのパスを指定する。
